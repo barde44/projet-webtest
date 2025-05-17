@@ -1,5 +1,4 @@
 # .github/workflows/tests.yml
-# .github/workflows/deploys.yml
 name: Run Python Tests
 
 on:
@@ -21,7 +20,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: "3.11" 
+        python-version: "3.11"  # Utilise 3.11 au lieu de 3.13 pour éviter les erreurs de compatibilité
 
     - name: Install dependencies
       run: |
