@@ -1,6 +1,4 @@
 # .github/workflows/tests.yml
-# Pipeline pour tests automatiques
-# Pipeline pour tests automatiques
 name: Run Python Tests
 
 on:
