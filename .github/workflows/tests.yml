@@ -20,13 +20,19 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: "3.11"  # Utilise 3.11 au lieu de 3.13 pour éviter les erreurs de compatibilité
+        python-version: "3.11"
 
     - name: Install dependencies
       run: |
         python -m venv env
         source env/bin/activate
         pip install -r requirements.txt
+
+    - name: Run Flask server in background
+      run: |
+        source env/bin/activate
+        nohup python app/main.py &  # Lance le serveur Flask en arrière-plan
+        sleep 3  # Donne quelques secondes pour que le serveur démarre
 
     - name: Run tests
       run: |
