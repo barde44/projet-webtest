@@ -7,7 +7,6 @@ def test_app():
     return TestApp(app)
 
 # Tests de base
-
 def test_get_all_users(test_app):
     response = test_app.get("/users")
     assert response.status_code == 200
