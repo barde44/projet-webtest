@@ -7,7 +7,7 @@ def test_e2e_get_users():
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, dict)
-    assert '1' in data  # Exemple d'utilisateur présent
+    assert '1' in data  # Exemple d'utilisateur présent dans la base de données
 
 def test_e2e_add_user():
     new_user = {"name": "Charlie", "email": "charlie@example.com"}
